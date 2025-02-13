@@ -8,19 +8,22 @@
 </head>
 <body>
     <script>
-        (function redirectToStore() {
+        function redirectToStore() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            // Redirect to Google Play for Android devices
             if (/android/i.test(userAgent)) {
                 window.location.href = 'https://play.google.com/store/apps/details?id=your.package.name';
             }
 
-            // Redirect to the App Store for iOS devices
-            if (/iPad|Macintosh|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325';
             }
-        })();
+
+            if (/Macintosh/.test(userAgent) && /Mac OS X/.test(userAgent)) {
+                window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325'; 
+            }
+        }
+        redirectToStore();
     </script>
 </body>
 </html>
