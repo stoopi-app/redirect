@@ -17,7 +17,7 @@
             }
 
             // Redirect to the App Store for iOS devices
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            if (/iPad|Macintosh|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325';
             }
         })();
