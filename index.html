@@ -13,16 +13,13 @@
             console.log("Current User Agent:", userAgent); // Debugging line
 
             if (/android/i.test(userAgent)) {
-                console.log("Redirecting to Android store"); // Debugging line
                 window.location.href = 'https://play.google.com/store/apps/details?id=com.app.stoopi';
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                console.log("Redirecting to iOS store"); // Debugging line
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325';
             } else if (/Macintosh|Mac OS X/.test(userAgent)) {
-                console.log("Redirecting to macOS store"); // Debugging line
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325'; 
             } else {
-                console.log("Device or browser not recognized"); // Debugging line
+                console.log("Device or browser not recognized"); 
             }
         }
         redirectToStore();
