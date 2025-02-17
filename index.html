@@ -19,7 +19,8 @@
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325';
             }
 
-            if (/MAC OS X/.test(userAgent) && /Mac OS X/.test(userAgent)) {
+            // Simplified macOS check, looking for a standard representation
+            if (/Macintosh|Mac OS X/.test(userAgent)) {
                 window.location.href = 'https://apps.apple.com/us/app/stoopi/id6737131325'; 
             }
         }
